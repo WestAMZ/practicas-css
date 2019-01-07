@@ -1,0 +1,76 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: seagreen;
+}
+h1
+{
+    text-align: center;
+    color: #fff;
+}
+.container
+{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2em;
+}
+.item
+{
+    /* 
+        darken (color,%) : oscurece la tonalidad de un color dado
+        Less
+        background: darken(seagreen,15);
+    */
+    background :#1c5534;
+    line-height: 4;
+    padding:  0 2em;
+    margin:  1.5em;
+    color: #fff;
+    position: relative;
+}
+.item:before
+{
+    content:"";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    bottom:0;
+    /*
+    Transition: <tipo o tipos> tiempo;
+    cuando se hace un cambio en el estilo se crea una transicion
+    */
+    transition: all .3s;
+}
+/*
+    Genera cambio en before cuando ha y hover sobre item
+*/
+.item:hover:before
+{
+    width:100%;
+}
+.uno:before
+{
+    left:0;
+}
+.dos:before
+{
+    right:0;
+}
+.tres:before
+{
+    /*
+    Posición de before al centro
+    */
+    left:50%;
+}
+.tres:hover:before
+{
+    /*
+    Mediante crece (llega al 100%) desplzamos ubicaión a 0
+    */
+    left:0;
+}
