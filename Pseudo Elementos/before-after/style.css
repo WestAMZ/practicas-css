@@ -1,0 +1,38 @@
+body
+{
+    margin:0;
+    font-family: sans-serif;
+    background: #222;
+}
+h1
+{
+    text-align: center;
+    color:#aaa;
+}
+h2
+{
+    color: #eee;
+    text-align: center;
+    font-size:4em;
+}
+/*
+  Los pseudo elementos se identifican
+  <clase,etiqueta .. etc>::<before|after>
+  ó
+  <clase,etiqueta .. etc>:<before|after>
+  estos son hijos de el elemento
+  no pueden ser seleccionados con el cursor
+
+  */
+h2::before
+{
+    /*
+    Para aparecer este debe tener la 
+    propiedad content ("" en caso de vacia)
+    */
+    content: "hola ";
+}
+h2::after
+{
+    content: " mundo";
+}

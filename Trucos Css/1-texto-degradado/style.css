@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body
+{
+    background: rgb(37, 37, 37);
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+h1
+{
+    margin: 0;
+    font-size: 15em;
+    color: transparent;
+    font-weight: bolder;
+    /*background: linear-gradient( 120deg,skyblue,green);*/
+    background: url("http://lorempixel.com/400/200");
+    -webkit-background-clip: text;
+    -moz-background-clip: text ;
+}

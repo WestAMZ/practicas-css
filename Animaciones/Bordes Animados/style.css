@@ -30,7 +30,7 @@ h1
     color: #fff;
     position: relative;
 }
-.item:before
+.item::before
 {
     content:"";
     display: block;
@@ -52,22 +52,22 @@ h1
 {
     width:100%;
 }
-.uno:before
+.uno::before
 {
     left:0;
 }
-.dos:before
+.dos::before
 {
     right:0;
 }
-.tres:before
+.tres::before
 {
     /*
     Posición de before al centro
     */
     left:50%;
 }
-.tres:hover:before
+.tres:hover::before
 {
     /*
     Mediante crece (llega al 100%) desplzamos ubicaión a 0
