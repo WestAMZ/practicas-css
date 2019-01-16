@@ -7,7 +7,14 @@ body,html
 body
 {
     font-family: sans-serif;
+    color: white;
     text-align: center;
+    /*
+        Aplica varios colores en gradientes
+    */
+    background: -webkit-radial-gradient( #407BA0,
+                                         #2D5772,
+                                         #13242F);
 }
 /*Centrado absoluto de componentes*/
 .nubes , .mapa
@@ -23,7 +30,7 @@ body
 {
     height: 220px;
     width: 220px;
-    outline: 1px solid #ccc;
+    /*outline: 1px solid #ccc;*/
 }
 .nubes img
 {
@@ -56,3 +63,81 @@ body
         background-position: -401.8px center;
     }
 }
+
+/*
+    Estrellas
+*/
+.estrella
+{
+    width: 2px;
+    height: 2px;
+    background: #FFF;
+    position: absolute;
+    border-radius:50%;
+}
+.primera{
+    top: 30%;
+    left: 50%;
+}
+.segunda{
+    top: 30%;
+    left: 30%;
+}
+.tercera{
+    top: 90%;
+    left: 90%;
+}
+.cuarta{
+    top: 80%;
+    left: 20%;
+}
+.quinta{
+    top: 20%;
+    left: 80%;
+}
+.sexta{
+    top: 30%;
+    left: 70%;
+}
+.septima{
+    top: 60%;
+    left: 80%;
+}
+.octva{
+    top: 150%;
+    left: 80%;
+}
+.novena{
+
+}
+.decima{
+    top: 90%;
+    left: 50%;
+}
+.estrella:nth-child(2n)
+{
+    -webkit-animation: estrella-par 2s infinite;
+}
+@-moz-keyframes  estrella-par
+{
+    0%
+    {
+        box-shadow: 0 0 3px 3px rgba(255,255,255,.3);
+    }
+    100%
+    {
+        box-shadow: 0 0 16px 16px rgba(255,255,255,.3);
+    }
+}
+/*
+@-moz-keyframes 
+{
+    from
+    {
+        box-shadow: 0 0 3px 3px rgba(255,255,255,.3);
+    }
+    to
+    {
+        box-shadow: 0 0 16px 16px rgba(255,255,255,.3);
+    }
+}*/
