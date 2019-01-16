@@ -118,9 +118,9 @@ body
 {
     -webkit-animation: estrella-par 2s infinite;
 }
-@-moz-keyframes  estrella-par
+@-webkit-keyframes  estrella-par
 {
-    0%
+    0%,90%
     {
         box-shadow: 0 0 3px 3px rgba(255,255,255,.3);
     }
