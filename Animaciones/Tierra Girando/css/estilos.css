@@ -108,7 +108,8 @@ body
     left: 80%;
 }
 .novena{
-
+    top: 50%;
+    left: 90%;
 }
 .decima{
     top: 90%;
@@ -118,13 +119,28 @@ body
 {
     -webkit-animation: estrella-par 2s infinite;
 }
+.estrella:nth-child(2n+1)
+{
+    -webkit-animation: estrella-impar 2s infinite;
+}
 @-webkit-keyframes  estrella-par
 {
-    0%,90%
+    0%
+    {
+        box-shadow: 0 0 16px 16px rgba(255,255,255,.3);
+    }
+    10%,100%
     {
         box-shadow: 0 0 3px 3px rgba(255,255,255,.3);
     }
-    100%
+}
+@-webkit-keyframes  estrella-impar
+{
+    0%,35%
+    {
+        box-shadow: 0 0 3px 3px rgba(255,255,255,.3);
+    }
+    45%
     {
         box-shadow: 0 0 16px 16px rgba(255,255,255,.3);
     }
