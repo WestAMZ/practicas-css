@@ -9,8 +9,9 @@ body
         rgb(124, 94, 206),
         rgb(39, 39, 39)
     );
-    width: 100vh;
-    height: 100vw;
+    /*width: 100vh;
+    height: 100vw;*/
+    height: 100vh;
 }
 .cara
 {
@@ -29,7 +30,7 @@ body
     right: 0;
     margin: auto;
 
-    outline: 1px solid white;
+    /*outline: 1px solid white;*/
 }
 .ojo
 {
@@ -54,17 +55,44 @@ body
 .boca
 {
     background: black;
-    height: 50px;
+    height: 100px;
     width: 200px;
     border-radius: 50%;
 
     position: absolute;
-    bottom: 10%;
-    left: 100px;
+    bottom: 15%;
+    left: 105px;
     box-shadow: 10px 0px 0px 0px yellow ;
 
     /*-webkit-animation: parpadear 2s infinite ease;*/
 }
+.cara:hover .boca
+{
+    -webkit-animation: abrir-boca 4s infinite ease;
+}
+.boca::before
+{
+    content: "";
+    background: yellow;
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    bottom: 50px;
+    z-index: 90;
+}
+.boca::after
+{
+    content: "";
+    border-radius: 50%;
+    background: red;
+    height: 20px;
+    width: 80px;
+    position: absolute;
+    left: 60px;
+    bottom: 0;
+    z-index: 90;
+}
+
 /*
     Animaciones
 */
@@ -77,5 +105,17 @@ body
     100%
     {
         height: 0px;
+    }
+}
+
+@-webkit-keyframes abrir-boca
+{
+    0%
+    {
+        
+    }
+    100%
+    {
+      
     }
 }
