@@ -55,19 +55,21 @@ body
 .ceja
 {
     position: absolute;
-    background: black;
+    background:transparent;
     height: 20px;
     width: 90px;
-    top: 25%;
+    top: 33%;
+    transition: all 2s;
+    -webkit-transition: all 2s;
 }
 .ceja:nth-child(3)
 {
-    left: 15%;
+    left: 20%;
     transform: rotate(30deg);
 }
 .ceja:nth-child(4)
 {
-    right: 15%;
+    right: 20%;
     transform: rotate(-30deg);
 }
 .mejia
@@ -92,9 +94,9 @@ body
 .boca
 {
     background: black;
-    height: 100px;
+    height: 60px;
     width: 200px;
-    border-radius: 50%;
+    border-radius: 0  0 50% 50%;
 
     position: absolute;
     top: 60%;
@@ -107,6 +109,11 @@ body
 {
     -webkit-animation: abrir-boca 4s forwards ease;
 }
+.cara:hover .ceja
+{
+    background: black;
+}
+/*
 .boca::before
 {
     content: "";
@@ -116,7 +123,10 @@ body
     position: absolute;
     bottom: 50px;
     z-index: 90;
-}
+}*/
+/*
+    Lengua
+*/
 .boca::after
 {
     content: "";
@@ -172,11 +182,10 @@ body
 {
     0%
     {
-        
+        border-radius: 0  0 50% 50%;   
     }
     100%
     {
-        height: 20px;
-        border-radius: 0px;
+        border-radius: 50% 50%  0  0 ;
     }
 }
